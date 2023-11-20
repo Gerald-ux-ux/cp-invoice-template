@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="px-96">
+    <div class="flex my-6 flex-col space-y-4 mx-auto">
+      <!-- Section 1 -->
+      <div class="flex border-b pb-2 justify-between w-full items-center">
+        <img src="../Cp.svg" alt="" />
+        <div class="flex-col">
+          <h4>Invoice</h4>
+          <h4 class="">Issue Date:</h4>
+          <h4 class="text-black/50">Oct 31, 2023</h4>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+
+      <div class="flex border-b pb-2 justify-between">
+        <div class="flex-col space-y-2">
+          <h1 class="text-2xl font-bold">John's Brewery</h1>
+          <p class="text-black/50 text-sm">john@johnsbrewery.com</p>
+          <p class="text-black/50 text-sm">+254 712 345 678</p>
+        </div>
+
+        <p class="text-black/50">Thanks for your business.</p>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="flex justify-between">
+        <div class="flex-col space-y-2">
+          <h1 class="uppercase font-semibold mb-2">Bill to</h1>
+
+          <p class="text-xs text-black/50">Mary Kamau</p>
+          <p class="text-xs text-black/50">marykamau@gmail.com</p>
+          <p class="text-xs text-black/50">+254 700 000 000</p>
+        </div>
+
+        <div class="flex-col space-y-2">
+          <h1 class="uppercase font-semibold mb-2">Payment</h1>
+
+          <p class="text-xs text-black/50">Due date: Nov 12, 2023</p>
+          <p class="text-xs text-black/50">KES 21,980.00</p>
+        </div>
+      </div>
+
+      <!-- Table items -->
+      <table class="w-full mt-8 table-auto">
+        <thead class="table-head-spacing">
+          <tr class="uppercase text-xs">
+            <th
+              class="uppercase text-left border-t border-b py-4 tracking-wide"
+            >
+              Item
+            </th>
+            <th
+              class="uppercase text-left border-t border-b py-4 tracking-wide"
+            >
+              Qty
+            </th>
+            <th
+              class="uppercase text-left border-t border-b py-4 tracking-wide"
+            >
+              Price
+            </th>
+            <th
+              class="uppercase text-left border-t border-b py-4 tracking-wide"
+            >
+              Amount
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="border-b text-black/50">
+            <td class="py-4">
+              <span class="flex-col flex">
+                <span>{item.name}</span>
+                <span>{item.description}</span>
+              </span>
+            </td>
+            <td>{item.quantity}</td>
+            <td>KES {item.price}</td>
+            <td>KES {item.totalCost}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Counter -->
+
+      <div
+        class="flex-col gray border-b p-2 flex mt-6 items-end space-y-1 justify-end"
+      >
+        <tr>
+          <td>
+            <span class="flex">
+              <span class="w-36 mr-36">Subtotal</span>
+              <span class="text-black/50">KES {subTotal}</span>
+            </span>
+          </td>
+        </tr>
+
+        <tr class="">
+          <td class="">
+            <span class="flex text-black/50">
+              <span class="w-36 mr-36">Tax</span>
+              <span>+ KES {tax}</span>
+            </span>
+          </td>
+        </tr>
+
+        <tr class="">
+          <td class="text-black/50">
+            <span class="flex text-black/50">
+              <span class="w-36 mr-36">Discount</span>
+              <span>+ KES {discount}</span>
+            </span>
+          </td>
+        </tr>
+      </div>
+      <!-- Total -->
+      <div
+        class="flex-col gray border-b p-2 flex items-end space-y-1 justify-end"
+      >
+        <tr class="border-t">
+          <td>
+            <span class="flex font-medium text-black">
+              <span class="w-36 uppercase mr-36">Total Due</span>
+              <span>KES {totalValue}</span>
+            </span>
+          </td>
+        </tr>
+      </div>
+      <!-- Btn -->
+      <button
+        class="bg-[#0066ff] hover:bg-blue-500 flex items-center justify-center mt-6 text-white p-3 mx-auto w-4/12 rounded-3xl"
+      >
+        Click this link to pay
+      </button>
+    </div>
+  </body>
+</html>
